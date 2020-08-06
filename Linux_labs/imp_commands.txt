@@ -1,0 +1,82 @@
+Commands:
+1. ls command - list directory contents, List information about the FILEs (the current directory by default).
+	SYNTAX:   ls [OPTION]... [FILE]...
+	EXAMPLE: ls -al : lists all the contents of current directory in long list format, equivalent with 'll' command.
+	FLAGS: 
+		-a, --all: do not ignore entries starting with . and ..
+		-d, --directory: list directories themselves, not their contents
+		-g: like -l, do not list owner
+		-i, --inode: print the index number of each file
+		-l: use long list format
+		-R, --recursive: list subdirectories recursively
+		-s, --size: print the allocated size of each file
+		-S: sort by file size, largest first
+		-t: sort by modification time, newest first
+		
+2. touch command - change the filestamps (creates file if not existing, unless -c or -h is supplied), Update the access and modification times of each FILE to the current time.
+
+	SYNTAX: touch [OPTION] FILE
+	EXAMPLE: touch file.txt: creates a new file or modifies the timestamp of file file.txt
+	FLAGS:
+		-a : Change only the access time
+		-c, --no-create : do not create any file
+		-d. --date: parse STRING and use it instead of current time
+		-m : change only the modification time
+		
+3. grep, egrep (extended grep), fgrep (Fixed grep), pgrep (Process grep), rgrep (Recursive grep) - this command prints the line matching a pattern
+	
+	SYNTAX:		grep [OPTIONS] PATTERN [FILE...]
+	EXAMPLE: grep -i 'time' time.txt : matches all the lines in a file with string 'time' in them, ignores cases.
+	grep  searches  for  PATTERN  in  each FILE.  A FILE of “-” stands for standard input.  If no FILE is given, recursive searches examine the working directory, and nonrecursive searches read standard input.  By default, grep prints the matching lines.
+	In addition, the variant programs egrep, fgrep and rgrep are the same as grep -E, grep -F, and grep -r, respectively.  These variants are deprecated, but are provided for backward compatibility.
+	
+	FLAGS:
+		-E, --extended-regexp: Interpret PATTERN as an extended regular expression (ERE, see below).
+        -F, --fixed-strings: Interpret PATTERN as a list of fixed strings (instead of regular expressions), separated by newlines, any of which is to be matched.
+		-G, --basic-regexp: Interpret PATTERN as a basic regular expression (BRE, see below).  This is the default.
+		-P, --perl-regexp: Interpret the pattern as a Perl-compatible regular expression (PCRE).  This is experimental and grep -P may warn of unimplemented features.
+		-i, --ignore-case: Ignore case distinctions, so that characters that differ only in case match each other.
+        -v, --invert-match: Invert the sense of matching, to select non-matching lines.
+		
+4. cat command - concatenate files and print on the standard output, With no FILE, or when FILE is -, read standard input
+
+	SYNTAX: cat [OPTIONS...] [FILES...]
+	EXAMPLE: cat -n text.txt: prints the contents of the file "text.txt", along with line numbers
+	FLAGS:
+		-b, --number-nonblank: number nonempty output lines, overrides -n
+		-E, --show-ends: display $ at end of each line
+		-n, --number: number all output lines
+		-T, --show-tabs: display TAB characters as ^I
+		-i: performs a case-insensitive search.
+		-v: displays the lines not containing the specified pattern.
+		-c: displays the count of the matching patterns.
+		
+		
+5. cut command - Print selected parts of lines from each FILE to standard output.With no FILE, or when FILE is -, read standard input.
+
+	SYNTAX: cut [OPTIONS...] [FILES...]
+	EXAMPLE: cut -d ' ' -f2 users.txt : this command cuts the contents of file by " " and prints the second field.
+	FLAGS:
+		-c, --characters=LIST: select only these characters
+		-d, --delimiter=DELIM: use DELIM instead of TAB for field delimiter
+        -f, --fields=LIST: select only these fields;  also print any line that contains no delimiter character, unless the -s option is specified
+		
+		
+6. seq command - Print numbers from FIRST to LAST, in steps of INCREMENT.
+	
+	SYNTAX: seq [OPTIONS...] [FIRST] [INCREMENT] LAST
+	EXAMPLE: seq 1 2 10: this command prints 1,3,5,7,9 to the STDOUT.
+	
+	If  FIRST or INCREMENT is omitted, it defaults to 1.  That is, an omitted INCREMENT defaults to 1 even when LAST is smaller than FIRST.  The sequence of numbers ends when the sum of the current number and INCREMENT would become greater than LAST.  FIRST, INCREMENT, and LAST are interpreted as floating point values.  INCREMENT is usually positive if FIRST is smaller than LAST, and INCREMENT is usually  negative  if  FIRST  is  greater  than  LAST.  INCREMENT must not be 0; none of FIRST, INCREMENT and LAST may be NaN. FORMAT must be suitable for printing one argument of type 'double'; it defaults to %.PRECf if FIRST, INCREMENT, and LAST are all fixed point decimal numbers with maximum precision PREC, and to %g otherwise.
+	
+	FLAGS:
+		-f, --format=FORMAT: use printf style floating-point FORMAT
+		-s, --separator=STRING: use STRING to separate numbers (default: \n)
+
+7. sed command - Sed  is  a stream editor.  A stream editor is used to perform basic text transformations on an input stream (a file or input from a pipeline).
+
+	SYNTAX: sed [OPTIONS] 's/old_string/new_string' [FILE]
+	EXAMPLE: sed 's/unix/linux' test.txt : this will replace the 1st occurence of word "unix" in each line with "linux".
+	
+	FLAGS:
+		-E, -r, --regexp-extended: use extended regular expressions in the script (for portability use POSIX -E)

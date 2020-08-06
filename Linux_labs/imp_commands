@@ -1,0 +1,26 @@
+Commands:
+1. ls command - list directory contents
+
+	SYNTAX:   ls [OPTION]... [FILE]...
+	
+	FLAGS: 
+		-a, --all: do not ignore entries starting with . and ..
+		-d, --directory: list directories themselves, not their contents
+		-g: like -l, do not list owner
+		-i, --inode: print the index number of each file
+		-l: use long list format
+		-R, --recursive: list subdirectories recursively
+		-s, --size: print the allocated size of each file
+		-S: sort by file size, largest first
+		-t: sort by modification time, newest first
+		
+2. touch command - change the filestamps (creates file if not existing, unless -c or -h is supplied)
+
+	SYNTAX: touch [OPTION] FILE
+	
+	FLAGS:
+		-a : Change only the access time
+		-c, --no-create : do not create any file
+		-d. --date: parse STRING and use it instead of current time
+		-m : change only the modification time
+		

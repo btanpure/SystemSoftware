@@ -1,0 +1,15 @@
+total 52
+-rw-rw-rw-. 1 karthikgs karthikgs  31 Sep 25 11:25 greeting.sh
+-rw-rw-rw-. 1 karthikgs karthikgs  49 Sep 25 11:26 greeting1.sh
+-rw-rw-rw-. 1 karthikgs karthikgs  11 Sep 25 11:26 greeting.txt
+-rw-rw-rw-. 1 karthikgs karthikgs 145 Sep 25 11:28 rhyme.sh
+-rw-rw-rw-. 1 karthikgs karthikgs 107 Sep 25 11:28 rhyme.txt
+-rw-rw-rw-. 1 karthikgs karthikgs  13 Sep 25 11:32 rhyme1.sh
+-rw-rw-rw-. 1 karthikgs karthikgs 100 Sep 25 11:44 outerr.sh
+-rw-rw-rw-. 1 karthikgs karthikgs 114 Sep 25 12:16 head.sh
+-rw-rw-rw-. 1 karthikgs karthikgs 208 Sep 25 12:35 file_exists.sh
+-rw-rw-rw-. 1 karthikgs karthikgs 573 Sep 25 12:55 indir.sh
+-rw-rw-rw-. 1 karthikgs karthikgs 533 Sep 25 21:51 script.sh
+-rw-rw-r--. 1 karthikgs karthikgs 633 Sep 25 21:59 script1.sh
+-rw-rw-r--. 1 karthikgs karthikgs  91 Sep 29 09:25 tee.sh
+-rw-rw-r--. 1 karthikgs karthikgs   0 Sep 29 09:26 hello.txt
